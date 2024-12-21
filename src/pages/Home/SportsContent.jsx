@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import gsap from "gsap";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SportsContent = () => {
   const [activeTab, setActiveTab] = useState("simple");
@@ -8,6 +10,13 @@ const SportsContent = () => {
   const contentRef = useRef(null);
   const tabLineRef = useRef(null);
   const tabRefs = useRef({});
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: false
+    });
+  }, []);
 
   const simpleContestFaqs = [
     {
@@ -815,11 +824,11 @@ const SportsContent = () => {
     }, [expandedSection, faq.id]);
 
     return (
-      <div className="rounded-lg overflow-hidden bg-black">
+      <div className="rounded-lg overflow-hidden ">
       {/* Gradient border button */}
       <div className="p-[1px] bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 rounded-lg">
         <button
-          className="w-full px-6 py-4 flex justify-between items-center cursor-pointer group bg-black rounded-lg hover:bg-black/50 transition-all duration-300"
+          className="w-full px-6 py-4 flex justify-between items-center cursor-pointer group bg-gray-800 rounded-lg hover:bg-black/50 transition-all duration-300"
           onClick={() => toggleSection(faq.id)}
           aria-expanded={expandedSection === faq.id}
         >
@@ -837,18 +846,20 @@ const SportsContent = () => {
         className="overflow-hidden"
         style={{ height: 0 }}
       >
-        <div className="px-6 py-4 space-y-4 bg-gray-50 border-t border-gray-200">
+        <div className="px-6 py-4 space-y-4 bg-gray-600 border-t border-gray-200">
           <div className="space-y-2">
-            <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900">
+            <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-white">
               {faq.content.heading}
             </h3>
             {faq.content.subheading && (
-              <h4 className="text-sm sm:text-base font-medium text-gray-700">
+              <h4 className="text-sm sm:text-base font-medium text-white">
                 {faq.content.subheading}
               </h4>
             )}
           </div>
-          <div className="prose prose-sm sm:prose lg:prose-lg max-w-none text-gray-600">
+          <div  className="prose prose-sm sm:prose lg:prose-lg max-w-none text-white" 
+          data-aos={faq.id % 2 === 0 ? "fade-left" : "fade-right"}
+          data-aos-delay={faq.id * 100}>
             {faq.content.paragraphs}
           </div>
         </div>
@@ -864,7 +875,7 @@ const SportsContent = () => {
   ];
 
   return (
-    <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 bg-black">
+    <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 ">
       <div className="mb-8 border-b border-gray-200 relative">
         <div className="flex space-x-8">
           {tabs.map((tab) => (

@@ -2,15 +2,19 @@ import React from 'react';
 
 const TieBreakingInWonByBid = () => {
   return (
-    <div className="bg-white rounded-lg  p-6 max-w-6xl mx-auto">
-      <h2 className="text-2xl font-bold mb-4 text-red-500">Tie-Breaking in WonByBid: Prize Sharing</h2>
-      <p className="mb-4">In WonByBid, if multiple participants place the <strong>same unique bid amount</strong>, the system resolves the tie through <strong>prize sharing</strong>. This ensures fairness while rewarding participants who played strategically.</p>
+    <div className="bg-gray-900 rounded-lg p-6 max-w-6xl mx-auto">
+      <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent">Tie-Breaking in WonByBid: Prize Sharing</h2>
+      <p className="mb-4 text-gray-300 border border-gray-700 bg-gray-800 p-4 rounded">
+        In WonByBid, if multiple participants place the <strong>same unique bid amount</strong>, the system resolves the tie through <strong>prize sharing</strong>. This ensures fairness while rewarding participants who played strategically.
+      </p>
 
-      <h3 className="text-xl font-bold mb-4 text-red-500">How Prize Sharing Works</h3>
-      <p className="mb-4">When two or more participants place the same unique bid, and this bid qualifies as a top-ranked bid, the prize allocated for that rank is <strong>equally divided</strong> among all the tied participants.</p>
+      <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent">How Prize Sharing Works</h3>
+      <p className="mb-4 text-gray-300 border border-gray-700 bg-gray-800 p-4 rounded">
+        When two or more participants place the same unique bid, and this bid qualifies as a top-ranked bid, the prize allocated for that rank is <strong>equally divided</strong> among all the tied participants.
+      </p>
 
-      <h3 className="text-xl font-bold mb-4 text-red-500">Key Rules for Prize Sharing:</h3>
-      <ul className="list-disc pl-6 mb-4">
+      <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent">Key Rules for Prize Sharing:</h3>
+      <ul className="list-disc pl-6 mb-4 text-gray-300">
         <li>
           <strong>Equal Sharing:</strong>
           <ul className="list-disc pl-6">
@@ -31,9 +35,9 @@ const TieBreakingInWonByBid = () => {
         </li>
       </ul>
 
-      <h3 className="text-xl font-bold mb-4 text-red-500">Example with Prize Sharing</h3>
+      <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent">Example with Prize Sharing</h3>
       <div className="overflow-x-auto">
-        <table className="w-full border-collapse rounded-lg shadow-md">
+        <table className="w-full border-collapse rounded-lg shadow-md text-white">
           <thead>
             <tr className="bg-blue-200">
               <th className="px-4 py-2 border-b border-blue-400">Contest Setup</th>
@@ -58,17 +62,17 @@ const TieBreakingInWonByBid = () => {
       </div>
 
       <div className="overflow-x-auto">
-        <table className="w-full text-center  border-collapse border-[1px] border-blue-400 rounded-lg shadow-md">
+        <table className="w-full text-center border-collapse border-[1px] text-white border-blue-400 rounded-lg shadow-md">
           <thead>
             <tr className="bg-blue-200">
-              <th className="px-4 py-2 border-b border-blue-400">User</th>
+              <th className="px-4 py-2 border-b border-blue-400">User </th>
               <th className="px-4 py-2 border-b border-blue-400">Bid Amount</th>
               <th className="px-4 py-2 border-b border-blue-400">Feedback</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="px-4 py-2 border-b border-blue-400">Ravi</td>
+              <td className="px-4 py-2 border-b border-blue -400">Ravi</td>
               <td className="px-4 py-2 border-b border-blue-400">₹9.99</td>
               <td className="px-4 py-2 border-b border-blue-400">Highest and Unique</td>
             </tr>
@@ -91,8 +95,8 @@ const TieBreakingInWonByBid = () => {
         </table>
       </div>
 
-      <h3 className="text-xl font-bold mb-4 text-red-500">Step-by-Step Ranking and Prize Sharing</h3>
-      <ol className="list-decimal pl-6 mb-4">
+      <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent">Step-by-Step Ranking and Prize Sharing</h3>
+      <ol className="list-decimal pl-6 mb-4 text-gray-300">
         <li>
           <strong>Rank Bids:</strong>
           <ul className="list-disc pl-6">
@@ -111,13 +115,13 @@ const TieBreakingInWonByBid = () => {
         </li>
       </ol>
 
-      <h3 className="text-xl font-bold mb-4 text-red-500">Final Results</h3>
+      <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent">Final Results</h3>
       <div className="overflow-x-auto">
-        <table className="w-full border-collapse border-[1px] text-center border-blue-400 rounded-lg shadow-md">
+        <table className="w-full border-collapse border-[1px] text-center border-blue-400 text-white rounded-lg shadow-md">
           <thead>
             <tr className="bg-blue-200">
               <th className="px-4 py-2 border-b border-blue-400">Rank</th>
-              <th className="px-4 py-2 border-b border-blue-400">User</th>
+              <th className="px-4 py-2 border-b border-blue-400">User </th>
               <th className="px-4 py-2 border-b border-blue-400">Bid Amount</th>
               <th className="px-4 py-2 border-b border-blue-400">Prize</th>
               <th className="px-4 py-2 border-b border-blue-400">Notes</th>
@@ -156,21 +160,23 @@ const TieBreakingInWonByBid = () => {
         </table>
       </div>
 
-      <h3 className="text-xl font-bold mb-4 text-red-500">Additional Scenarios</h3>
-      <h4 className="text-lg font-bold mb-2 text-red-500">Multiple Tie Examples:</h4>
-      <ul className="list-disc pl-6 mb-4">
+      <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent">Additional Scenarios</h3>
+      <h4 className="text-xl font-bold mb-4 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent">Multiple Tie Examples:</h4>
+      <ul className="list-disc pl-6 mb-4 text-gray-300">
         <li><strong>Three-Way Tie:</strong> If three participants tie for the 2nd rank, the prize for 2nd place will be divided equally among all three. (Example: ₹300 ÷ 3 = ₹100 each.)</li>
         <li><strong>Insufficient Unique Bids:</strong> If no unique bid exists for a lower rank, the prize remains undistributed or may be adjusted per contest rules.</li>
       </ul>
 
-      <h3 className="text-xl font-bold mb-4 text-red-500">Benefits of Prize Sharing</h3>
-      <ul className="list-disc pl-6 mb-4">
+      <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent">Benefits of Prize Sharing</h3>
+      <ul className="list-disc pl-6 mb-4 text-gray-300">
         <li><strong>Fairness:</strong> Ensures all tied participants are rewarded equally for their strategic bids.</li>
         <li><strong>Engagement:</strong> Encourages participants to continue bidding without fear of losing entirely in case of ties.</li>
         <li><strong>Transparency:</strong> A clear system for dividing prizes fosters trust in the platform.</li>
       </ul>
 
-      <p>By implementing <strong>prize sharing</strong> for ties, WonByBid guarantees a fair and enjoyable experience for all participants while maintaining the integrity of the ranking system.</p>
+      <p className="text-gray-300 border border-gray-700 bg-gray-800 p-4 rounded">
+        By implementing <strong>prize sharing</strong> for ties, WonByBid guarantees a fair and enjoyable experience for all participants while maintaining the integrity of the ranking system.
+      </p>
     </div>
   );
 };

@@ -147,7 +147,7 @@ const Toprated = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-black py-16">
+    <div ref={containerRef} className=" py-16">
       <div className="container mx-auto px-4">
         <h2 
           ref={headingRef}
@@ -164,7 +164,7 @@ const Toprated = () => {
             <div
               key={index}
               ref={el => cardsRef.current[index] = el}
-              className="backdrop-blur-lg bg-white/80 rounded-2xl shadow-xl p-8 transform transition-all duration-300 relative overflow-hidden group"
+              className="backdrop-blur-lg bg-gray-700 rounded-2xl shadow-xl p-8 transform transition-all duration-300 relative overflow-hidden group"
             >
               <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
               <div className="flex flex-col items-center relative z-10">
@@ -173,11 +173,11 @@ const Toprated = () => {
                 </div>
                 <div 
                   ref={el => numberRefs.current[index] = el}
-                  className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-gray-900 mb-3"
+                  className="text-2xl font-bold text-white"
                 >
                   0
                 </div>
-                <div className="text-gray-600 font-semibold tracking-wide">
+                <div className="text-white font-semibold tracking-wide">
                   {item.label}
                 </div>
               </div>

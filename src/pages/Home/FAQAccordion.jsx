@@ -194,7 +194,7 @@ const FAQAccordion = () => {
   };
 
   return (
-    <div className="w-full bg-black  border-t border-b p-8 overflow-hidden">
+    <div className="w-full   border-t border-b p-8 overflow-hidden">
       {faqData.map((item, index) => (
         <div 
           key={item.id} 

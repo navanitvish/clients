@@ -69,7 +69,7 @@ const StepsLayout = () => {
   }, []);
 
   return (
-    <div className="bg-black px-6 py-16">
+    <div className=" px-6 py-16">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent mb-4">
@@ -92,7 +92,7 @@ const StepsLayout = () => {
                 </div>
               )}
 
-              <div className={`relative h-full bg-black bg-opacity-50 backdrop-blur-sm rounded-2xl p-6 border border-white/10 transition-all duration-300 transform hover:-translate-y-1 ${step.borderHoverColor}`}>
+              <div className={`relative h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm rounded-2xl p-6 border border-white/10 transition-all duration-300 transform hover:-translate-y-1 ${step.borderHoverColor}`}>
                 <div className={`absolute -top-4 -left-4 w-12 h-12 rounded-xl bg-gradient-to-br ${step.numberGradient} flex items-center justify-center text-xl font-bold text-white shadow-lg`}>
                   {index + 1}
                 </div>
@@ -106,7 +106,7 @@ const StepsLayout = () => {
                 </h3>
                 <p 
                   ref={el => textRefs.current[index] = el}
-                  className="text-gray-300/80 leading-relaxed"
+                  className="text-white leading-relaxed"
                 >
                   {step.description}
                 </p>

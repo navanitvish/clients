@@ -38,7 +38,7 @@ const FantasyCricketLanding = () => {
         gsap.to(chars, {
           opacity: 1,
           y: 0,
-          duration: 0.05,
+          duration: 0.3,
           stagger: 0.02,
           ease: "power2.out",
           scrollTrigger: {
@@ -57,7 +57,7 @@ const FantasyCricketLanding = () => {
   }, []);
 
   return (
-    <div className="bg-black px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
+    <div className=" px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
       <div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start lg:items-center">
           {/* Left Column - Content */}

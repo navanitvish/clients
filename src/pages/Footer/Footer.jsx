@@ -29,12 +29,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-red-800 text-white px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <footer className=" text-white px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Social Links */}
           <div className="space-y-6 text-center sm:text-left" data-aos="fade-up">
-            <div className="text-2xl sm:text-3xl font-bold tracking-wider">
+            <div className="text-2xl sm:text-3xl font-bold tracking-wider bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent leading-tight">
               {companyInfo.name}
             </div>
             <div className="social-links flex flex-wrap justify-center sm:justify-start gap-4">
