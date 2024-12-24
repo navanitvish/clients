@@ -40,7 +40,7 @@ const Home = () => {
         gsap.to('.download-btn', {
           duration: 0.5,
           opacity: 1,
-          y: 580,
+          y: 560,
           ease: 'power2.out',
         });
       } else {
