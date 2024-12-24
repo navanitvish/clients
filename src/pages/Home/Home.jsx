@@ -8,7 +8,7 @@ import FantasyCricketLanding from './FantasyCricketLanding';
 import SportsContent from './SportsContent';
 import FAQAccordion from './FAQAccordion';
 import TestimonialSlider from './TestimonialSlider';
-import { FaArrowDown } from 'react-icons/fa'; // Arrow icon
+import { FaArrowDown } from 'react-icons/fa';
 import Toprated from './Toprated';
 
 const Home = () => {
@@ -18,7 +18,6 @@ const Home = () => {
     window.open("https://www.transferx.in/trnsfr.YSloVo", "_blank");
   };
 
-  // Detect scroll to update button position
   const handleScroll = () => {
     if (window.scrollY > 100) {
       setScrolled(true);
@@ -28,30 +27,30 @@ const Home = () => {
   };
 
   useEffect(() => {
-    // Add scroll event listener to detect scrolling
     window.addEventListener('scroll', handleScroll);
-    
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   useEffect(() => {
-    if (scrolled) {
-      gsap.to('.download-btn', {
-        duration: 0.5,
-        y: 580,
-        x: 0,
-        ease: 'power2.out',
-      });
-    } else {
-      gsap.to('.download-btn', {
-        duration: 0.5,
-        y: 0,
-        x: 0,
-        ease: 'power2.out',
-      });
+    const downloadBtn = document.querySelector('.download-btn');
+    if (downloadBtn) {
+      if (scrolled) {
+        gsap.to('.download-btn', {
+          duration: 0.5,
+          opacity: 1,
+          y: 580,
+          ease: 'power2.out',
+        });
+      } else {
+        gsap.to('.download-btn', {
+          duration: 0.5,
+          opacity: 0,
+          y: -100,
+          ease: 'power2.out',
+        });
+      }
     }
   }, [scrolled]);
 
@@ -64,18 +63,22 @@ const Home = () => {
       <FantasyCricketLanding />
       <SportsContent />
       <FAQAccordion />
-      {/* <TestimonialSlider /> */}
-      
+
       {/* Download Button for Mobile View */}
-      <div className={`lg:hidden fixed top-7 right-4 p-4 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 shadow-md  rounded-full   download-btn overflow-hidden`}>
-        <button onClick={handleDownloadAppClick} className="text-sm font-medium flex items-center justify-center rounded-full">
-          <FaArrowDown className="" /> 
+      <div className={`lg:hidden fixed top-7 right-4 p-4 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 shadow-md rounded-full download-btn overflow-hidden opacity-0 -translate-y-24`}>
+        <button 
+          onClick={handleDownloadAppClick} 
+          className="text-sm font-medium flex items-center justify-center rounded-full"
+        >
+          <FaArrowDown />
         </button>
       </div>
-      
+
       {/* Download Button for Desktop View */}
       <div className="lg:fixed bottom-0 right-0 p-4 bg-red-500 shadow-md rounded-t-xl sm hidden lg:block">
-        <button onClick={handleDownloadAppClick} className="text-sm font-medium">Download WonByBid app</button>
+        <button onClick={handleDownloadAppClick} className="text-sm font-medium">
+          Download WonByBid app
+        </button>
       </div>
     </div>
   );
