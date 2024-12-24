@@ -85,7 +85,7 @@ const WonByBidLanding = () => {
           <p
             data-aos="fade-up"
           
-            className="text-xl sm:text-xl md:text-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent font-bold p-6 rounded-xl shadow-lg leading-relaxed transform transition-all hover:scale-105"
+            className="text-xl sm:text-xl text-center md:text-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent font-bold p-6 rounded-xl shadow-lg leading-relaxed transform transition-all hover:scale-105"
           >
             World's First Skill-Based App Delivering 20x Faster Results
           </p>
