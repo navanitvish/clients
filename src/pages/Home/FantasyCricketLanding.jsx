@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import SplitType from 'split-type';
+import SplitType from "split-type";
 
 import image2 from "../../assets/thumbnail (1).png";
 import image3 from "../../assets/thumbnail (2).png";
@@ -27,12 +27,12 @@ const FantasyCricketLanding = () => {
     // Text typing animation
     textRefs.current.forEach((textRef, index) => {
       if (textRef) {
-        const text = new SplitType(textRef, { types: 'chars' });
+        const text = new SplitType(textRef, { types: "chars" });
         const chars = text.chars;
 
         gsap.set(chars, {
           opacity: 0,
-          y: 20
+          y: 20,
         });
 
         gsap.to(chars, {
@@ -44,63 +44,61 @@ const FantasyCricketLanding = () => {
           scrollTrigger: {
             trigger: textRef,
             start: "top bottom-=100",
-            toggleActions: "play none none reverse"
+            toggleActions: "play none none reverse",
           },
-          delay: index * 0.3
+          delay: index * 0.3,
         });
       }
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
   return (
-    <div className="px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
+    <div className="px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 max-w-8xl mx-auto">
       <div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start lg:items-center">
           {/* Left Column - Content */}
-          <div className="space-y-4 sm:space-y-5 lg:space-y-6">
-            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent leading-tight">
+          <div className="space-y-4 sm:space-y-5 lg:space-y-6 px-4 sm:px-6 lg:px-8">
+            <h1 className="text-xl sm:text-3xl lg:text-5xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent leading-tight text-center sm:text-left">
               Play Contests on WonByBid
             </h1>
 
-            <div className="space-y-4 lg:text-xl text-justify sm:text-base">
-              <p 
-                ref={el => textRefs.current[0] = el}
-                className="text-white leading-relaxed"
+            <div className="w-full space-y-2 sm:space-y-3 lg:space-y-4">
+              <p
+                ref={(el) => (textRefs.current[0] = el)}
+                className="text-white leading-relaxed text-sm sm:text-base lg:text-xl "
               >
-                "Looking for quick results and real winnings?{" "}
-                <span className="font-bold">WonByBid</span> is here to redefine
+                Looking for quick results and real winnings?{" "}
+                <span className="font-bold">WonByBid</span>is here to redefine
                 the thrill of competition! Our unique, skill-based bidding
-                platform offers an exciting way to win big with instant
-                results. With <span className="font-bold">WonByBid.com</span>,
-                there's no waiting – just place your unique bid and see if
-                you've secured the prize.
+                platform offers an exciting way to win big with instant results.
+                With <span className="font-bold">WonByBid.com</span>,there's no
+                waiting-just place your unique bid and see if you've secured the
+                prize.
               </p>
 
-              <p 
-                ref={el => textRefs.current[1] = el}
-                className="text-white leading-relaxed"
+              <p
+                ref={(el) => (textRefs.current[1] = el)}
+                className="text-white leading-relaxed text-justify text-sm sm:text-base lg:text-xl"
               >
-                Our platform combines fast-paced contests, secure gameplay, and
+                Our platform combines fast-paced contests, secure gameplay,and
                 real cash rewards. Whether you're a sports enthusiast or simply
-                love strategic bidding, <span className="font-bold">
-                  WonByBid
-                </span>{" "}
-                lets you jump in, play, and win on your terms – anytime,
-                anywhere.
+                love strategic bidding,{" "}
+                <span className="font-bold">WonByBid</span> lets you jump in,
+                play, and win on your terms – anytime, anywhere.
               </p>
 
-              <p 
-                ref={el => textRefs.current[2] = el}
-                className="text-white leading-relaxed"
+              <p
+                ref={(el) => (textRefs.current[2] = el)}
+                className="text-white leading-relaxed text-justify text-sm sm:text-base lg:text-xl"
               >
                 Join <span className="font-bold">WonByBid</span> today, where
                 quick results, instant rewards, and the excitement of strategic
-                bidding come together. Don't miss out – start bidding and
-                winning now!"
+                bidding come together. Don't miss out-start bidding and
+                winning now!
               </p>
             </div>
           </div>

@@ -895,7 +895,7 @@ const SportsContent = () => {
         </div>
         <div 
           ref={tabLineRef}
-          className="absolute bottom-0 h-0.5 bg-red-600 transition-all duration-300"
+          className="absolute bottom-0 h-0.5  transition-all duration-300"
         />
       </div>
 
