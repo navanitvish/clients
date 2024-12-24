@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
         <p className="text-lg mb-4 border border-gray-700 bg-gray-800 p-4 rounded">
           We collect various types of information to provide and improve our services. The information we collect includes:
         </p>
-        <ul className="list-disc pl-6 text-lg mb-4">
+        <ul className=" pl-6 text-lg mb-4">
           <li className="border border-gray-700 bg-gray-800 p-4 rounded">Personal Identification Information: Name, email address, phone number, etc.</li>
           <li className="border border-gray-700 bg-gray-800 p-4 rounded">Account Information: User credentials, preferences, and account settings.</li>
           <li className="border border-gray-700 bg-gray-800 p-4 rounded">Usage Data: Information on how you interact with our platform (e.g., contests entered, bid activity, etc.).</li>
@@ -34,14 +34,14 @@ const PrivacyPolicy = () => {
         </ul>
       </section>
 
-      <section className="mb-8">
+      <section className="mb-8 space-y-6">
         <h2 className="text-3xl font-semibold bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent mb-4">
           How We Use Your Information
         </h2>
         <p className="text-lg mb-4 border border-gray-700 bg-gray-800 p-4 rounded">
           We use the collected information to:
         </p>
-        <ul className="list-disc pl-6 text-lg mb-4">
+        <ul className=" pl-6 text-lg mb-4 space-y-6">
           <li className="border border-gray-700 bg-gray-800 p-4 rounded">Provide and maintain our services, including processing contest entries and managing accounts.</li>
           <li className="border border-gray-700 bg-gray-800 p-4 rounded">Enhance your user experience by personalizing content and recommendations.</li>
           <li className="border border-gray-700 bg-gray-800 p-4 rounded">Communicate with you about contests, updates, and other relevant information.</li>
@@ -50,14 +50,14 @@ const PrivacyPolicy = () => {
         </ul>
       </section>
 
-      <section className="mb-8">
+      <section className="mb-8 space-y-6">
         <h2 className="text-3xl font-semibold bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent mb-4">
           Data Sharing and Disclosure
         </h2>
         <p className="text-lg mb -4 border border-gray-700 bg-gray-800 p-4 rounded">
           We do not sell or rent your personal information to third parties. However, we may share your information in the following circumstances:
         </p>
-        <ul className="list-disc pl-6 text-lg mb-4">
+        <ul className="space-y-6 pl-6 text-lg mb-4">
           <li className="border border-gray-700 bg-gray-800 p-4 rounded">With service providers and business partners who assist us in operating the platform and delivering our services.</li>
           <li className="border border-gray-700 bg-gray-800 p-4 rounded">To comply with legal obligations or to protect our rights, property, and safety, or the rights of our users.</li>
           <li className="border border-gray-700 bg-gray-800 p-4 rounded">In the event of a business transfer, such as a merger, acquisition, or sale of assets, where your information may be part of the transaction.</li>
@@ -95,7 +95,7 @@ const PrivacyPolicy = () => {
         <p className="text-lg mb-4 border border-gray-700 bg-gray-800 p-4 rounded">
           Depending on your location, you may have certain rights regarding your personal information, including the right to:
         </p>
-        <ul className="list-disc pl-6 text-lg mb-4">
+        <ul className="space-y-6 pl-6 text-lg mb-4">
           <li className="border border-gray-700 bg-gray-800 p-4 rounded">Access and correct your personal data.</li>
           <li className="border border-gray-700 bg-gray-800 p-4 rounded">Request deletion of your personal information.</li>
           <li className="border border-gray-700 bg-gray-800 p-4 rounded">Opt out of receiving marketing communications.</li>

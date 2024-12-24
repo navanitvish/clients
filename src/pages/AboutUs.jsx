@@ -42,7 +42,7 @@ const AboutUs = () => {
       <section className="mb-8">
         <h2 className="text-3xl font-semibold bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent mb-4">Cash Contests</h2>
         <p className="text-lg mb-4 border border-gray-700 bg-gray-800/50 p-4 rounded-lg">With WonByBid, you can turn your strategies into real rewards through various cash contests:</p>
-        <ul className="list-disc pl-6 text-lg space-y-4">
+        <ul className=" pl-6 text-lg space-y-4">
           <li className="border border-gray-700 bg-gray-800/50 p-4 rounded-lg"><strong>Fixed Entry Fee Contests:</strong> Fair and competitive contests with predefined entry fees and clear prize pools.</li>
           <li className="border border-gray-700 bg-gray-800/50 p-4 rounded-lg"><strong>Private Contests:</strong> Set your own entry fees and prize distribution. Customize and play with your own group for a unique experience.</li>
         </ul>
@@ -51,7 +51,7 @@ const AboutUs = () => {
       <section className="mb-8">
         <h2 className="text-3xl font-semibold bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent mb-4">Practice Contests</h2>
         <p className="text-lg mb-4 border border-gray-700 bg-gray-800/50 p-4 rounded-lg">For those new to bidding, start with Practice Contests:</p>
-        <ul className="list-disc pl-6 text-lg space-y-4">
+        <ul className=" pl-6 text-lg space-y-4">
           <li className="border border-gray-700 bg-gray-800/50 p-4 rounded-lg"><strong>No Entry Fee:</strong> Explore the gameplay for free and learn the basics.</li>
           <li className="border border-gray-700 bg-gray-800/50 p-4 rounded-lg"><strong>Quick Learning:</strong> Get fast results, understand the rules, and improve your bidding strategy before moving to cash contests.</li>
         </ul>
@@ -70,7 +70,7 @@ const AboutUs = () => {
 
       <section className="mb-8">
         <h2 className="text-3xl font-semibold bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent mb-4">Why Choose WonByBid?</h2>
-        <ul className="list-disc pl-6 text-lg space-y-4">
+        <ul className=" pl-6 text-lg space-y-4">
           <li className="border border-gray-700 bg-gray-800/50 p-4 rounded-lg"><strong>Quick Results:</strong> Experience the excitement of winning in minutes—no waiting!</li>
           <li className="border border-gray-700 bg-gray-800/50 p-4 rounded-lg"><strong>Transparency:</strong> Real-time updates, live rankings, and clear rules ensure fairness.</li>
           <li className="border border-gray-700 bg-gray-800/50 p-4 rounded-lg"><strong>Engagement:</strong> Compete in Simple Contests or create Private Contests for a personalized experience.</li>

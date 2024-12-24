@@ -57,7 +57,7 @@ const FantasyCricketLanding = () => {
   }, []);
 
   return (
-    <div className=" px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
+    <div className="px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
       <div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start lg:items-center">
           {/* Left Column - Content */}

@@ -131,7 +131,7 @@ const WonByBidRankingGuide = () => {
           <table className="w-full text-center border-collapse border-[1px] border-blue-400">
             <thead>
               <tr className="bg-blue-200">
-                <th className="px-4 py-2 bg-blue-200 text-left">Rank</th>
+                
                 <th className="px-4 py-2 bg-blue-200 text-left">Rank</th>
                 <th className="px-4 py-2 bg-blue-200 text-left">User </th>
                 <th className="px-4 py-2 bg-blue-200 text-center">Bid Amount</th>
@@ -200,9 +200,9 @@ const WonByBidRankingGuide = () => {
             <tbody>
               <tr>
                 <td className="px-4 py-2 border-b text-gray-300">1</td>
-                <td className="px-4 py-2 border-b text-gray-300">Ravi</td>
-                <td className="px-4 py-2 border-b >text-center text-gray-300">₹9.99</td>
+                <td className="px-4 py-2 border-b  text-gray-300">Ravi</td>
                 <td className="px-4 py-2 border-b text-center text-gray-300">₹9.99</td>
+                
               </tr>
               <tr>
                 <td className="px-4 py-2 border-b text-gray-300">2</td>

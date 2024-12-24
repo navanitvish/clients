@@ -67,7 +67,7 @@ const Home = () => {
       {/* <TestimonialSlider /> */}
       
       {/* Download Button for Mobile View */}
-      <div className={`lg:hidden fixed top-7 right-4 p-4 bg-red-500 shadow-md  rounded-full   download-btn overflow-hidden`}>
+      <div className={`lg:hidden fixed top-7 right-4 p-6 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 shadow-md  rounded-full   download-btn overflow-hidden`}>
         <button onClick={handleDownloadAppClick} className="text-sm font-medium flex items-center justify-center rounded-full">
           <FaArrowDown className="" /> 
         </button>
