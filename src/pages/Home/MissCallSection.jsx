@@ -22,9 +22,9 @@ const WonByBidLanding = () => {
   }, []);
 
   return (
-    <div className="  flex flex-col justify-between">
+    <div className=" flex flex-col justify-between">
       <div className="text-black flex-grow-0">
-        <div className="container mx-auto px-4 py-12 flex flex-col justify-center items-center max-w-5xl gap-6">
+        <div className="container mx-auto px-4 py-8 flex flex-col justify-center items-center max-w-5xl gap-">
           <h1
             data-aos="fade-down"
             data-aos-delay="100"
