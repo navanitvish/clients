@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { gsap } from 'gsap';
-import { FaArrowDown } from 'react-icons/fa';
+import React, { useEffect, useState } from "react";
+import { gsap } from "gsap";
+import { FaArrowDown } from "react-icons/fa";
 import Carousel from "../../components/SliderCarousel";
-import MissCallSection from './MissCallSection';
-import UserRating from './UserRating';
-import StepsLayout from './StepsLayout';
-import FantasyCricketLanding from './FantasyCricketLanding';
-import SportsContent from './SportsContent';
-import FAQAccordion from './FAQAccordion';
-import TestimonialSlider from './TestimonialSlider';
-import Toprated from './Toprated';
+import MissCallSection from "./MissCallSection";
+import UserRating from "./UserRating";
+import StepsLayout from "./StepsLayout";
+import FantasyCricketLanding from "./FantasyCricketLanding";
+import SportsContent from "./SportsContent";
+import FAQAccordion from "./FAQAccordion";
+import TestimonialSlider from "./TestimonialSlider";
+import Toprated from "./Toprated";
 
 const Home = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,25 +27,25 @@ const Home = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   useEffect(() => {
-    const downloadBtn = document.querySelector('.download-btn');
-    const arrowIcon = document.querySelector('.arrow-icon');
-    const borderElement = document.querySelector('.animated-border');
+    const downloadBtn = document.querySelector(".download-btn");
+    const arrowIcon = document.querySelector(".arrow-icon");
+    const borderElement = document.querySelector(".animated-border");
 
     if (downloadBtn && arrowIcon && borderElement) {
       if (scrolled) {
         // Button slide in animation
-        gsap.to('.download-btn', {
+        gsap.to(".download-btn", {
           duration: 0.5,
           opacity: 1,
-          y: 560,
-          ease: 'power2.out',
+          y: 590,
+          ease: "power2.out",
         });
 
         // Continuous rotate animation for arrow
@@ -53,7 +53,7 @@ const Home = () => {
           rotation: 360,
           duration: 2,
           repeat: -1,
-          ease: 'none'
+          ease: "none",
         });
 
         // Pulsing border animation
@@ -62,19 +62,19 @@ const Home = () => {
           opacity: 0,
           duration: 1.5,
           repeat: -1,
-          ease: 'power1.inOut'
+          ease: "power1.inOut",
         });
       } else {
         // Reset animations when scrolling back up
-        gsap.to('.download-btn', {
+        gsap.to(".download-btn", {
           duration: 0.5,
           opacity: 0,
           y: -100,
-          ease: 'power2.out',
+          ease: "power2.out",
           onComplete: () => {
             gsap.killTweensOf(arrowIcon);
             gsap.killTweensOf(borderElement);
-          }
+          },
         });
       }
     }
@@ -89,13 +89,13 @@ const Home = () => {
       <FantasyCricketLanding />
       <SportsContent />
       <FAQAccordion />
-      <TestimonialSlider />
+      {/* <TestimonialSlider /> */}
 
       {/* Download Button for Mobile View */}
       <div className="lg:hidden  fixed top-7 right-4 overflow-visible">
         {/* Animated border element */}
         <div className="animated-border hidden absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 rounded-full" />
-        
+
         {/* Main button */}
         <div className="download-btn relative p-4 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 shadow-md rounded-full overflow-hidden opacity-0 -translate-y-24">
           <button
@@ -109,8 +109,8 @@ const Home = () => {
 
       {/* Download Button for Desktop View */}
       <div className="lg:fixed bottom-0 right-0 p-4 bg-red-500 shadow-md rounded-t-xl hidden lg:block">
-        <button 
-          onClick={handleDownloadAppClick} 
+        <button
+          onClick={handleDownloadAppClick}
           className="text-sm font-medium text-white"
         >
           Download WonByBid app

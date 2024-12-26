@@ -214,7 +214,7 @@ import React from 'react';
 
 const FlexibleContestsInWonByBid = () => {
   return (
-    <div className="bg-gray-900 rounded-lg max-w-6xl mx-auto p-6 space-y-4">
+    <div className=" rounded-lg max-w-6xl mx-auto p-6 space-y-4">
       <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent">Flexible Contests in WonByBid: How It Works</h2>
       
       <p className="mb-4 border border-gray-700 bg-gray-800/50 p-4 rounded-lg text-gray-200">

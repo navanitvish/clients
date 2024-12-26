@@ -2,7 +2,7 @@ import React from "react";
 
 const WonByBidGuide = () => {
   return (
-    <div className="bg-gray-900 rounded-lg p-6 max-w-6xl mx-auto">
+    <div className=" rounded-lg p-6 max-w-6xl mx-auto">
       <h1 className="text-3xl font-bold mb-4 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent">
         Guide to Winning WonByBid Contests
       </h1>

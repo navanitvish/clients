@@ -58,7 +58,7 @@ const HowToPlay = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 px-4 py-12 sm:px-6 lg:px-8">
+    <div className="  px-4 py-12 sm:px-6 lg:px-8">
       {/* Hero Section */}
       <div className="max-w-4xl mx-auto text-center mb-16">
         <h1 className="text-4xl  bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent  font-bold  mb-6">

@@ -13,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 const FantasyCricketLanding = () => {
   const carouselRef = useRef(null);
   const textRefs = useRef([]);
+  const headingRef = useRef(null);
 
   useEffect(() => {
     // Carousel animation
@@ -24,29 +25,57 @@ const FantasyCricketLanding = () => {
       repeat: -1,
     });
 
-    // Text typing animation
+    // Heading animation
+    const headingText = new SplitType(headingRef.current, {
+      types: "chars, words",
+    });
+
+    gsap.from(headingText.chars, {
+      opacity: 0,
+      y: 50,
+      rotateX: -90,
+      stagger: 0.02,
+      duration: 0.8,
+      ease: "back.out(1.7)",
+      scrollTrigger: {
+        trigger: headingRef.current,
+        start: "top bottom-=100",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    // Enhanced text animations for paragraphs
     textRefs.current.forEach((textRef, index) => {
       if (textRef) {
-        const text = new SplitType(textRef, { types: "chars" });
-        const chars = text.chars;
-
-        gsap.set(chars, {
-          opacity: 0,
-          y: 20,
+        const text = new SplitType(textRef, {
+          types: "lines, words, chars",
+          tagName: "span",
         });
 
-        gsap.to(chars, {
-          opacity: 1,
-          y: 0,
-          duration: 0.3,
-          stagger: 0.02,
-          ease: "power2.out",
+        // Set initial state
+        gsap.set(text.words, {
+          opacity: 0,
+          y: 20,
+          rotateX: -45,
+        });
+
+        // Create timeline for each paragraph
+        const tl = gsap.timeline({
           scrollTrigger: {
             trigger: textRef,
-            start: "top bottom-=100",
+            start: "top bottom-=50",
+            end: "bottom center",
             toggleActions: "play none none reverse",
           },
-          delay: index * 0.3,
+        });
+
+        tl.to(text.words, {
+          opacity: 1,
+          y: 0,
+          rotateX: 0,
+          duration: 0.8,
+          stagger: 0.03,
+          ease: "power4.out",
         });
       }
     });
@@ -62,49 +91,53 @@ const FantasyCricketLanding = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start lg:items-center">
           {/* Left Column - Content */}
           <div className="space-y-4 sm:space-y-5 lg:space-y-6 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-xl sm:text-3xl lg:text-5xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent leading-tight text-center sm:text-left">
+            <h1
+              ref={headingRef}
+              className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent leading-tight text-center sm:text-left"
+            >
               Play Contests on WonByBid
             </h1>
 
-            <div className="w-full space-y-2 sm:space-y-3 lg:space-y-4">
+            <div className="w-full space-y-6 sm:space-y-8 lg:space-y-10">
               <p
                 ref={(el) => (textRefs.current[0] = el)}
-                className="text-white leading-relaxed text-sm sm:text-base lg:text-xl "
+                className="text-white leading-relaxed text-sm sm:text-base lg:text-xl tracking-wide"
               >
                 Looking for quick results and real winnings?{" "}
-                <span className="font-bold">WonByBid</span>is here to redefine
-                the thrill of competition! Our unique, skill-based bidding
-                platform offers an exciting way to win big with instant results.
-                With <span className="font-bold">WonByBid.com</span>,there's no
-                waiting-just place your unique bid and see if you've secured the
-                prize.
+                <span className="font-bold text-purple-400">WonByBid</span> is
+                here to redefine the thrill of competition! Our unique,
+                skill-based bidding platform offers an exciting way to win big
+                with instant results. With{" "}
+                <span className="font-bold text-purple-400">WonByBid.com</span>,
+                there's no waiting—just place your unique bid and see if you've
+                secured the prize.
               </p>
 
               <p
                 ref={(el) => (textRefs.current[1] = el)}
-                className="text-white leading-relaxed text-justify text-sm sm:text-base lg:text-xl"
+                className="text-white leading-relaxed text-sm sm:text-base lg:text-xl tracking-wide"
               >
-                Our platform combines fast-paced contests, secure gameplay,and
+                Our platform combines fast-paced contests, secure gameplay, and
                 real cash rewards. Whether you're a sports enthusiast or simply
                 love strategic bidding,{" "}
-                <span className="font-bold">WonByBid</span> lets you jump in,
-                play, and win on your terms – anytime, anywhere.
+                <span className="font-bold text-purple-400">WonByBid</span> lets
+                you jump in, play, and win on your terms – anytime, anywhere.
               </p>
 
               <p
                 ref={(el) => (textRefs.current[2] = el)}
-                className="text-white leading-relaxed text-justify text-sm sm:text-base lg:text-xl"
+                className="text-white leading-relaxed text-sm sm:text-base lg:text-xl tracking-wide"
               >
-                Join <span className="font-bold">WonByBid</span> today, where
-                quick results, instant rewards, and the excitement of strategic
-                bidding come together. Don't miss out-start bidding and
-                winning now!
+                Join <span className="font-bold text-purple-400">WonByBid</span>{" "}
+                today, where quick results, instant rewards, and the excitement
+                of strategic bidding come together. Don't miss out—start bidding
+                and winning now!
               </p>
             </div>
           </div>
 
           {/* Right Column - App Screenshots Carousel */}
-          <div className="relative mt-8 lg:mt-0 overflow-hidden">
+          <div className="relative mt-8 lg:mt-0 overflow-hidden rounded-3xl shadow-2xl">
             <div
               className="flex space-x-4 max-w-full mx-auto"
               ref={carouselRef}
@@ -133,7 +166,7 @@ const FantasyCricketLanding = () => {
           </div>
         </div>
 
-        <div className="mt-12 sm:mt-16 lg:mt-20 border-b-2 border-gray-100 w-full" />
+        <div className="mt-12 sm:mt-16 lg:mt-20 border-b-2 border-gray-100/10 w-full" />
       </div>
     </div>
   );

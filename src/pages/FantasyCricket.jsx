@@ -2,7 +2,7 @@ import React from "react";
 
 const WonByBidRankingGuide = () => {
   return (
-    <div className="bg-gray-900 p-6 max-w-6xl mx-auto">
+    <div className=" p-6 max-w-6xl mx-auto">
       <h1 className="text-3xl font-bold mb-4 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent">
         Ranking System in WonByBid: Detailed Guide
       </h1>
