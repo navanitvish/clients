@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const StepsLayout = () => {
   const textRefs = useRef([]);
-
+  
   const steps = [
     {
       title: "Select a Contest",
@@ -27,7 +27,7 @@ const StepsLayout = () => {
       borderHoverColor: "hover:border-purple-400/50"
     },
     {
-      title: "Win and Withdraw Instantly",
+      title: "Win and withdraw Instantly",
       description: "Win big and withdraw your winnings instantly with our fast, hassle-free payout process!",
       icon: <Trophy className="w-8 h-8" />,
       numberGradient: "from-red-400 to-red-600",
@@ -69,18 +69,18 @@ const StepsLayout = () => {
   }, []);
 
   return (
-    <div className="px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <div className="w-full min-h-screen px-4 sm:px-6 py-12 sm:py-16">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent mb-4">
             Get Started in 3 Easy Steps
           </h2>
-          <p className="text-base sm:text-lg text-gray-300/80 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-300/80 max-w-2xl mx-auto px-4">
             Join thousands of players and start your winning journey today
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 p-[13px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {steps.map((step, index) => (
             <div
               key={index}
@@ -92,12 +92,12 @@ const StepsLayout = () => {
                 </div>
               )}
 
-              <div className={`relative w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/10 transition-all duration-300 transform hover:-translate-y-1 ${step.borderHoverColor}`}>
-                <div className={`absolute -top-4 -left-4 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br ${step.numberGradient} flex items-center justify-center text-base sm:text-lg font-bold text-white shadow-lg`}>
+              <div className={`relative w-full h-full bg-gray-700/50 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/10 transition-all duration-300 transform hover:-translate-y-1 ${step.borderHoverColor}`}>
+                <div className={`absolute -top-3 -left-3 sm:-top-4 sm:-left-4 w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-gradient-to-br ${step.numberGradient} flex items-center justify-center text-lg sm:text-xl font-bold text-white shadow-lg`}>
                   {index + 1}
                 </div>
 
-                <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br ${step.iconGradient} flex items-center justify-center mb-4 sm:mb-6 shadow-lg transform group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl bg-gradient-to-br ${step.iconGradient} flex items-center justify-center mb-4 sm:mb-6 shadow-lg transform group-hover:scale-110 transition-transform duration-300`}>
                   {step.icon}
                 </div>
 
@@ -106,7 +106,7 @@ const StepsLayout = () => {
                 </h3>
                 <p 
                   ref={el => textRefs.current[index] = el}
-                  className="text-sm sm:text-base lg:text-lg  text-white tracking-tight leading-relaxed">
+                  className="text-sm sm:text-base text-white text-left sm:text-justify tracking-normal leading-relaxed overflow-hidden">
                   {step.description}
                 </p>
               </div>
