@@ -97,7 +97,7 @@ const FantasyCricketLanding = () => {
             <div className="w-full space-y-6 sm:space-y-8 lg:space-y-10">
               <p
                 ref={(el) => (textRefs.current[0] = el)}
-                className="text-white leading-relaxed text-sm sm:text-base lg:text-xl tracking-wide"
+                className="text-white leading-relaxed text-md sm:text-base lg:text-xl tracking-wide"
               >
                 Looking for quick results and real winnings?{" "}
                 <span className="font-bold text-red-400">WonByBid</span> is
@@ -111,7 +111,7 @@ const FantasyCricketLanding = () => {
 
               <p
                 ref={(el) => (textRefs.current[1] = el)}
-                className="text-white leading-relaxed text-sm sm:text-base lg:text-xl tracking-wide"
+                className="text-white leading-relaxed text-md sm:text-base lg:text-xl tracking-wide"
               >
                 Our platform combines fast-paced contests, secure gameplay, and
                 real cash rewards. Whether you're a sports enthusiast or simply
@@ -122,7 +122,7 @@ const FantasyCricketLanding = () => {
 
               <p
                 ref={(el) => (textRefs.current[2] = el)}
-                className="text-white leading-relaxed text-sm sm:text-base lg:text-xl tracking-wide"
+                className="text-white leading-relaxed text-md sm:text-base lg:text-xl tracking-wide"
               >
                 Join <span className="font-bold text-red-400">WonByBid</span>{" "}
                 today, where quick results, instant rewards, and the excitement
