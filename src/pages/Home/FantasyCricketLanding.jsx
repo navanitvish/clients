@@ -87,7 +87,7 @@ const FantasyCricketLanding = () => {
 
   return (
     <div className="px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 max-w-8xl mx-auto">
-      <h1 className="p-2 space-y-2 text-2xl sm:text-4xl md:text-6xl font-bold lg:text-6xl  bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent text-center">
+      <h1 className="p-2 space-y-2 text-3xl sm:text-4xl md:text-6xl font-bold lg:text-6xl  bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent text-center">
         Play Contests on WonByBid
       </h1>
       <div>
