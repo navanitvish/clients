@@ -87,7 +87,7 @@ const Footer = () => {
                   {secondColumnLinks.map((link, index) => (
                     <li 
                       key={index} 
-                      className="underline"
+                      className=""
                       data-aos="fade-up"
                       data-aos-delay={index * 50 + 300}
                     >

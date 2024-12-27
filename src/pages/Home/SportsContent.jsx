@@ -883,7 +883,7 @@ const SportsContent = () => {
               key={tab.id}
               ref={(el) => (tabRefs.current[tab.id] = el)}
               onClick={() => setActiveTab(tab.id)}
-              className={`relative py-3 px-1 text-sm sm:text-base lg:text-lg font-medium transition-colors duration-200 ${
+              className={`relative py-3 px-2  text-sm sm:text-base lg:text-lg font-medium transition-colors duration-200 ${
                 activeTab === tab.id
                   ? "bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent"
                   : "text-gray-500 hover:text-gray-700"

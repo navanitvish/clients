@@ -87,28 +87,24 @@ const FantasyCricketLanding = () => {
 
   return (
     <div className="px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 max-w-8xl mx-auto">
+      <h1 className="p-2 space-y-2 text-2xl sm:text-4xl md:text-6xl font-bold lg:text-6xl  bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent text-center">
+        Play Contests on WonByBid
+      </h1>
       <div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start lg:items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start lg:items-center mt-4 ">
           {/* Left Column - Content */}
           <div className="space-y-4 sm:space-y-5 lg:space-y-6 px-4 sm:px-6 lg:px-8">
-            <h1
-              ref={headingRef}
-              className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent leading-tight text-center sm:text-left"
-            >
-              Play Contests on WonByBid
-            </h1>
-
             <div className="w-full space-y-6 sm:space-y-8 lg:space-y-10">
               <p
                 ref={(el) => (textRefs.current[0] = el)}
                 className="text-white leading-relaxed text-sm sm:text-base lg:text-xl tracking-wide"
               >
                 Looking for quick results and real winnings?{" "}
-                <span className="font-bold text-purple-400">WonByBid</span> is
+                <span className="font-bold text-red-400">WonByBid</span> is
                 here to redefine the thrill of competition! Our unique,
                 skill-based bidding platform offers an exciting way to win big
                 with instant results. With{" "}
-                <span className="font-bold text-purple-400">WonByBid.com</span>,
+                <span className="font-bold text-red-400">WonByBid.com</span>,
                 there's no waiting—just place your unique bid and see if you've
                 secured the prize.
               </p>
@@ -120,7 +116,7 @@ const FantasyCricketLanding = () => {
                 Our platform combines fast-paced contests, secure gameplay, and
                 real cash rewards. Whether you're a sports enthusiast or simply
                 love strategic bidding,{" "}
-                <span className="font-bold text-purple-400">WonByBid</span> lets
+                <span className="font-bold text-red-400" >WonByBid</span> lets
                 you jump in, play, and win on your terms – anytime, anywhere.
               </p>
 
@@ -128,7 +124,7 @@ const FantasyCricketLanding = () => {
                 ref={(el) => (textRefs.current[2] = el)}
                 className="text-white leading-relaxed text-sm sm:text-base lg:text-xl tracking-wide"
               >
-                Join <span className="font-bold text-purple-400">WonByBid</span>{" "}
+                Join <span className="font-bold text-red-400">WonByBid</span>{" "}
                 today, where quick results, instant rewards, and the excitement
                 of strategic bidding come together. Don't miss out—start bidding
                 and winning now!

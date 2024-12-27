@@ -44,7 +44,7 @@ const Home = () => {
         gsap.to(".download-btn", {
           duration: 0.5,
           opacity: 1,
-          y: 590,
+          y: 610,
           ease: "power2.out",
         });
 

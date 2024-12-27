@@ -24,7 +24,7 @@ const WonByBidLanding = () => {
   return (
     <div className=" flex flex-col justify-between">
       <div className="text-black flex-grow-0">
-        <div className="container mx-auto px-4 py-8 flex flex-col justify-center items-center max-w-5xl gap-">
+        <div className=" mx-auto px-2 py-8 flex flex-col justify-center items-center max-w-6xl">
           <h1
             data-aos="fade-down"
             data-aos-delay="100"
@@ -36,16 +36,16 @@ const WonByBidLanding = () => {
           <p
             data-aos="fade-up"
             data-aos-delay="200"
-            className="text-xl sm:text-xl text-center md:text-2xl text-white font-bold p-6 rounded-xl bg-opacity-20  backdrop-blur-sm  leading-relaxed hover:scale-105 transition-transform duration-300"
+            className="text-lg sm:text-xl text-center md:text-2xl text-white font-bold p-6 rounded-xl bg-opacity-20  backdrop-blur-sm  leading-relaxed hover:scale-105 transition-transform duration-300"
           >
-            World's First Skill-Based App Delivering 20x Faster Results
+            World's First Skill-Based App and Delivering 20x Faster Results
           </p>
 
-          <div className="flex flex-col md:flex-row gap-8 w-full">
+          <div className="flex flex-col md:flex-row items-center w-full">
             <p
               data-aos="fade-right"
               data-aos-delay="300"
-              className="text-xl sm:text-xl md:text-2xl text-white font-normal p-6 rounded-xl bg-opacity-10  backdrop-blur-sm leading-relaxed hover:scale-105 transition-transform duration-300 md:w-1/2"
+              className="text-lg sm:text-xl md:text-2xl text-white font-normal p-6 rounded-xl bg-opacity-10  backdrop-blur-sm leading-relaxed hover:scale-105 transition-transform duration-300 md:w-1/2"
             >
               Experience outcomes in minutes, not hours. WonByBid brings you the best and most exciting gaming experience.
             </p>
@@ -53,7 +53,7 @@ const WonByBidLanding = () => {
             <p
               data-aos="fade-left"
               data-aos-delay="400"
-              className="text-xl sm:text-xl md:text-2xl backdrop-blur-sm font-medium text-white p-6 rounded-xl bg-opacity-10  leading-relaxed hover:scale-105 transition-transform duration-300 md:w-1/2"
+              className="text-lg text-left sm:text-xl md:text-2xl backdrop-blur-sm font-normal text-white p-6 rounded-xl bg-opacity-10  leading-relaxed hover:scale-105 transition-transform duration-300 md:w-1/2"
             >
               In just 10 days, WonByBid has become the talk of the town, bringing unmatched fun and excitement.
             </p>
