@@ -12,7 +12,10 @@ const StepsLayout = () => {
   const steps = [
     {
       title: "Select a Contest",
-      description: "Choose from our range of live and upcoming contests.",
+      description: [
+        "Choose from our range of  ",
+        " live and upcoming contests.",
+      ],
       icon: <Monitor className="w-8 h-8" />,
       numberGradient: "from-blue-400 to-blue-600",
       iconGradient: "from-blue-400 to-blue-600",
@@ -20,7 +23,10 @@ const StepsLayout = () => {
     },
     {
       title: "Place Your Unique Bid",
-      description: "Strategically place a unique bid to increase your chances of winning big.",
+      description: [
+        "Strategically place a unique bid ",
+        "to increase your chances of winning big.",
+      ],
       icon: <Users className="w-8 h-8" />,
       numberGradient: "from-purple-400 to-purple-600",
       iconGradient: "from-purple-400 to-purple-600",
@@ -28,7 +34,11 @@ const StepsLayout = () => {
     },
     {
       title: "Win and withdraw Instantly",
-      description: "Win big and withdraw your winnings instantly with our fast, hassle-free payout process!",
+      description: [
+        "Win big and withdraw your winnings instantly",
+        " with our fast, hassle-free payout process!",
+
+      ],
       icon: <Trophy className="w-8 h-8" />,
       numberGradient: "from-red-400 to-red-600",
       iconGradient: "from-red-400 to-red-600",
@@ -104,11 +114,13 @@ const StepsLayout = () => {
                 <h3 className={`text-lg sm:text-xl font-bold bg-gradient-to-r ${step.numberGradient} bg-clip-text text-transparent mb-2 sm:mb-3`}>
                   {step.title}
                 </h3>
-                <p 
+                <div 
                   ref={el => textRefs.current[index] = el}
-                  className="text-sm sm:text-base tracking-normal text-white text-left sm:text-justify tracking-normal leading-relaxed overflow-hidden">
-                  {step.description}
-                </p>
+                  className="text-sm sm:text-base text-white space-y-1">
+                  {step.description.map((line, i) => (
+                    <p key={i} className="leading-relaxed tracking-wide">{line}</p>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
