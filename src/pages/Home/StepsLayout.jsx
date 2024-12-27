@@ -106,7 +106,7 @@ const StepsLayout = () => {
                 </h3>
                 <p 
                   ref={el => textRefs.current[index] = el}
-                  className="text-sm sm:text-base text-white text-left sm:text-justify tracking-normal leading-relaxed overflow-hidden">
+                  className="text-sm sm:text-base tracking-normal text-white text-left sm:text-justify tracking-normal leading-relaxed overflow-hidden">
                   {step.description}
                 </p>
               </div>
