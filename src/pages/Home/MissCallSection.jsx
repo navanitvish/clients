@@ -1,9 +1,15 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
-
+import apkFile from "../../assets/app-release.apk"; 
 const WonByBidLanding = () => {
   const handleDownloadAppClick = () => {
-    window.open("https://www.transferx.in/trnsfr.YSloVo", "_blank");
+    // Create a temporary anchor element
+    const link = document.createElement("a");
+    link.href = apkFile;
+    link.download = "app-release.apk"; // The name of the downloaded file
+    document.body.appendChild(link);
+    link.click(); // Trigger the download
+    document.body.removeChild(link); // Clean up
   };
   useEffect(() => {
     // Initialize AOS

@@ -1,11 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import image1 from "../assets/lastlogo.jpg";
-import { ArrowRight } from "lucide-react";
+import apkFile from "../assets/app-release.apk"; // Import the APK file
 
 const Header = () => {
   const handleDownloadAppClick = () => {
-    window.open("https://www.transferx.in/trnsfr.YSloVo", "_blank");
+    // Create a temporary anchor element
+    const link = document.createElement("a");
+    link.href = apkFile;
+    link.download = "app-release.apk"; // The name of the downloaded file
+    document.body.appendChild(link);
+    link.click(); // Trigger the download
+    document.body.removeChild(link); // Clean up
   };
 
   return (
@@ -19,7 +25,9 @@ const Header = () => {
               alt="Logo"
               className="h-16 w-16 mr-2 rounded-full object-cover"
             />
-            <h3 className="text-white text-md lg:text-xl font-bold">WONBYBID</h3>
+            <h3 className="text-white text-md lg:text-xl font-bold">
+              WONBYBID
+            </h3>
           </Link>
 
           {/* Download button on the right */}
@@ -32,9 +40,7 @@ const Header = () => {
         </div>
       </header>
 
-      <div id="#123">
-
-      </div>
+      <div id="#123"></div>
     </>
   );
 };

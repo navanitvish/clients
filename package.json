@@ -20,6 +20,7 @@
     "react-router": "^6.27.0",
     "react-router-dom": "^6.27.0",
     "react-slick": "^0.30.2",
+    "react-toastify": "^11.0.3",
     "split-type": "^0.3.4"
   },
   "devDependencies": {

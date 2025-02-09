@@ -8,14 +8,20 @@ import StepsLayout from "./StepsLayout";
 import FantasyCricketLanding from "./FantasyCricketLanding";
 import SportsContent from "./SportsContent";
 import FAQAccordion from "./FAQAccordion";
-import TestimonialSlider from "./TestimonialSlider";
-import Toprated from "./Toprated";
 
+import Toprated from "./Toprated";
+import apkFile from "../../assets/app-release.apk"; 
 const Home = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const handleDownloadAppClick = () => {
-    window.open("https://www.transferx.in/trnsfr.YSloVo", "_blank");
+    // Create a temporary anchor element
+    const link = document.createElement("a");
+    link.href = apkFile;
+    link.download = "app-release.apk"; // The name of the downloaded file
+    document.body.appendChild(link);
+    link.click(); // Trigger the download
+    document.body.removeChild(link); // Clean up
   };
 
   const handleScroll = () => {

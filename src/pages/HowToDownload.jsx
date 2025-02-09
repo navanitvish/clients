@@ -2,18 +2,24 @@ import React from 'react';
 import { Download } from 'lucide-react';
 import AppInstallationSteps from './ApiInstalltion';
 import image1 from '../assets/WhatsApp Image 2024-11-11 at 15.09.43_19d63217.jpg';
-
+import apkFile from "../assets/app-release.apk"; 
 const WonByBidGuide = () => {
   const downloadSteps = [
     {
       title: "Direct Download",
-      description: "Click on the DOWNLOAD NOW button to start downloading the WonByBid app.",
+      description: "Click on the DOWNLOAD App button to start downloading the WonByBid app.",
       icon: <Download className="w-6 h-6 text-purple-600" />,
     },
   ];
 
   const handleDownloadAppClick = () => {
-    window.open("https://www.transferx.in/trnsfr.YSloVo", "_blank");
+    // Create a temporary anchor element
+    const link = document.createElement("a");
+    link.href = apkFile;
+    link.download = "app-release.apk"; // The name of the downloaded file
+    document.body.appendChild(link);
+    link.click(); // Trigger the download
+    document.body.removeChild(link); // Clean up
   };
 
   return (
